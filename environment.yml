@@ -1,0 +1,19 @@
+name: genai-political-portraits
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - pillow
+  - pytorch
+  - torchvision
+  - pip
+  - pip:
+      - open_clip_torch
+      - umap-learn 
