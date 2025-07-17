@@ -4,11 +4,11 @@ This repository contains data and code for the paper "Lost in Translation? Explo
 
 ## Instructions for the quantitative analysis
 1. Create the conda environment 
-conda env create -f environment.yml
+```conda env create -f environment.yml```
 
+2. To perform the analysis of association scores
+  ``` python analysis.py association_scores ```
 
-2. Create dataframe and extract image embeddings: 
-python extract_embeddings_df.py
-
-3. Perform the analysis as in analysis.ipynb 
+3. To perform the analysis of embeddings
+  ``` python analysis.py embeddings_umap```
 
