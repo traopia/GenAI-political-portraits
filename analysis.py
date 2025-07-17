@@ -237,8 +237,9 @@ def plot_embeddings_with_double_borders(df, figsize=(20, 15), dot_size=100):
     ax.set_title('UMAP of CLIP Embedding Space – Highlighting Country & Politician Accuracy', fontsize=16)
     #ax.axis('off')
     plt.tight_layout()
-    plt.show()
     plt.savefig("results/embeddings_umap.png")
+    plt.show()
+    
 
 def plot_clusters(df):
 
@@ -254,8 +255,9 @@ def plot_clusters(df):
         ax.legend(loc="best", fontsize=8)
 
     plt.tight_layout()
-    plt.show()
     plt.savefig("results/embeddings_umap_clusters.png")
+    plt.show()
+
 
 def main(analysis_type = "association_scores"):
     if os.path.exists("data_genai.json"):
@@ -279,4 +281,8 @@ def main(analysis_type = "association_scores"):
         plot_clusters(df)
 
 if __name__ == "__main__":
-    main("association_scores")
+    import sys
+    if len(sys.argv) > 1:
+        main(sys.argv[1])
+    else:
+        main("association_scores")
